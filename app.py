@@ -23,7 +23,7 @@ def is_ai_generated(image: Image.Image):
     fake_score = np.mean(img_array)  # Mock scoring
     is_fake = fake_score > 0.5
     return {
-        "prediction": "AI-generated" if is_fake else "Human",
+        "prediction": "AI-generated" if is_fake else "Human-generated",
         "probability": round(float(fake_score if is_fake else 1 - fake_score), 4)
     }
 
